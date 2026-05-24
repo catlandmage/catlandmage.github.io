@@ -1,0 +1,47 @@
+body {
+  font-size: 200%;
+  font: 100% arial, helvetica, sans-serif;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* 发光 */
+#faguang a {
+  opacity: .8;
+}
+#faguang a:hover {
+  opacity: 1;
+}
+
+/* 侧边栏 */
+#sb {
+
+  position: absolute;
+  left: 0;
+  width: 29%;
+}
+
+/* 主内容 */
+#mc {
+  border: 2px dashed #ccc;
+  margin: 0 auto;
+  padding: 20px;
+  width: 60%;
+  box-sizing: border-box;  /* padding算在宽度内，不会溢出 */
+  word-wrap: break-word;    /* 长单词自动换行 */
+  overflow-wrap: break-word;
+}
+
+/* 窗口小于1000px时：隐藏侧边栏，主内容占满 */
+@media screen and (max-width: 1000px) {
+  #sb {
+    display: none;
+  }
+  #mc {
+    width: 100%;
+    margin-left: 0;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+}
